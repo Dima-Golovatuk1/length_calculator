@@ -106,10 +106,50 @@ class Ui_MainWindow(object):
                 num2 = 1.5783*10**-5
                 result = num * num2
                 self.result.setText(str(result))
-            print(selected_value)
-            print(selected_result)
 
+        if selected_value == "Ярд":
+            if selected_result == "Фут":
+                num = selected_value_num
+                num2 = 3
+                result = num * num2
+                self.result.setText(str(result))
+            elif selected_result == "Дюйм":
+                num = selected_value_num
+                num2 = 36
+                result = num * num2
+                self.result.setText(str(result))
+            elif selected_result == "Ярд":
+                num = selected_value_num
+                num2 = 1
+                result = num * num2
+                self.result.setText(str(result))
+            elif selected_result == "Миль":
+                num = selected_value_num
+                num2 = 0.000568182
+                result = num * num2
+                self.result.setText(str(result))
 
+        if selected_value == "Миль":
+            if selected_result == "Фут":
+                num = selected_value_num
+                num2 = 5280
+                result = num * num2
+                self.result.setText(str(result))
+            elif selected_result == "Дюйм":
+                num = selected_value_num
+                num2 = 63360
+                result = num * num2
+                self.result.setText(str(result))
+            elif selected_result == "Ярд":
+                num = selected_value_num
+                num2 = 1760
+                result = num * num2
+                self.result.setText(str(result))
+            elif selected_result == "Миль":
+                num = selected_value_num
+                num2 = 1
+                result = num * num2
+                self.result.setText(str(result))
 
 
 if __name__ == "__main__":
