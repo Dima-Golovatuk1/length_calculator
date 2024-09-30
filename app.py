@@ -64,6 +64,7 @@ class Ui_MainWindow(object):
         selected_value = self.distance_value.currentText()
         selected_result = self.distance_result.currentText()
         selected_value_num = int(self.value.toPlainText())
+        # Фути
         if selected_value == "Фут":
             if selected_result == "Фут":
                 num = selected_value_num
@@ -85,6 +86,8 @@ class Ui_MainWindow(object):
                 num2 = 0.000189393939
                 result = num * num2
                 self.result.setText(str(result))
+
+        # Дюйми
         elif selected_value == "Дюйм":
             if selected_result == "Фут":
                 num = selected_value_num
@@ -107,6 +110,7 @@ class Ui_MainWindow(object):
                 result = num * num2
                 self.result.setText(str(result))
 
+        # Ярди
         if selected_value == "Ярд":
             if selected_result == "Фут":
                 num = selected_value_num
@@ -129,6 +133,7 @@ class Ui_MainWindow(object):
                 result = num * num2
                 self.result.setText(str(result))
 
+        # Милі
         if selected_value == "Миль":
             if selected_result == "Фут":
                 num = selected_value_num
