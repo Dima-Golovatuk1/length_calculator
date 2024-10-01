@@ -63,13 +63,14 @@ class Ui_MainWindow(object):
     def calculate(self):
         selected_value = self.distance_value.currentText()
         selected_result = self.distance_result.currentText()
-        selected_value_num = int(self.value.toPlainText())
+        selected_value_num = float(self.value.toPlainText())
         # Фути
         if selected_value == "Фут":
             if selected_result == "Фут":
                 num = selected_value_num
-                num2 = 1
+                num2 = float(1)
                 result = num * num2
+                print(result)
                 self.result.setText(str(result))
             elif selected_result == "Дюйм":
                 num = selected_value_num
