@@ -25,7 +25,6 @@ class Ui_MainWindow(object):
         self.distance_value = QtWidgets.QComboBox(self.centralwidget)
         self.distance_value.setGeometry(QtCore.QRect(10, 20, 80, 31))
         self.distance_value.setFont(font)
-        self.distance_value.setModelColumn(0)
         self.distance_value.setObjectName("distance_value")
         self.distance_value.addItems(["Фут", "Дюйм", "Ярд", "Миль"])
 
@@ -33,7 +32,6 @@ class Ui_MainWindow(object):
         self.distance_result = QtWidgets.QComboBox(self.centralwidget)
         self.distance_result.setGeometry(QtCore.QRect(360, 20, 80, 31))
         self.distance_result.setFont(font)
-        self.distance_result.setModelColumn(0)
         self.distance_result.setObjectName("distance_result")
         self.distance_result.addItems(["Фут", "Дюйм", "Ярд", "Миль"])
 
