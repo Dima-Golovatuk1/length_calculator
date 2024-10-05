@@ -11,18 +11,18 @@
 Тут прописані стилі та налаштування до вікна програмитакі такі як розмір:
 
 ```python~~
-MainWindow.setObjectName("MainWindow") #задаємо ім'я обєкту MainWindow
-MainWindow.resize(450, 320) #задаємо розмір самого вікна програми
-self.centralwidget = QtWidgets.QWidget(MainWindow) #створення такого якби вікна на якому буду зозміщатися всі елементи
-self.centralwidget.setEnabled(True) #вмикаємо це вікно (хоча вона вімкнено автоматично, тому це не обов'язково)
-self.centralwidget.setObjectName("centralwidget") #даємо ім'я елементу
-MainWindow.setWindowTitle(translate("length calculator", "length calculator")) #ставимо заголовок на нашу програму
+MainWindow.setObjectName("MainWindow") # задаємо ім'я об'єкту MainWindow
+MainWindow.resize(450, 320) # задаємо розмір самого вікна програми
+self.centralwidget = QtWidgets.QWidget(MainWindow) # створення такого собі вікна, на якому будуть розміщуватися всі елементи
+self.centralwidget.setEnabled(True) # вмикаємо це вікно (хоча воно ввімкнено автоматично, тому це не обов'язково)
+self.centralwidget.setObjectName("centralwidget") # даємо ім'я елементу
+MainWindow.setWindowTitle(translate("length calculator", "length calculator")) # ставимо заголовок на нашу програму
 ```
 
 Це стилі та налаштування прописані для кнопки:
 ```python~~
         self.btn_calculate = QtWidgets.QPushButton(self.centralwidget) #Створюємо елемент в нашому випадку кнопку
-            і вказуємо дн ми його створюємо в нашому випадка на елемента centralwidget
+            і вказуємо де ми його створюємо в нашому випадка на елемента centralwidget
         self.btn_calculate.setGeometry(QtCore.QRect(110, 100, 250, 100)) #Встановлюємо положення та розмір
         self.btn_calculate.setStyleSheet("background-color: rgb(170, 170, 170);") #тут задаємо колір кнопки-елементу
         self.btn_calculate.setObjectName("btn_calculate") #ім'я кнопки-елементу
@@ -41,7 +41,7 @@ MainWindow.setWindowTitle(translate("length calculator", "length calculator")) #
 
 Те саме що і зверху але тут вибирається на що перетворити
 ```python~~
-        # Все те саме змынивося лише ім'я та кординати
+        # Все те саме змінилося лише ім'я та кординати
         self.distance_result = QtWidgets.QComboBox(self.centralwidget)
         self.distance_result.setGeometry(QtCore.QRect(360, 20, 80, 31))
         self.distance_result.setFont(font)
@@ -52,7 +52,7 @@ MainWindow.setWindowTitle(translate("length calculator", "length calculator")) #
 
 По факту це один і той самий елемент, проте мені сподобалося що в QTextEdit коли ти виходиш за рамки
 то тебе переносити на 2 рядок і в тебе є можливість скролити. Тому замість обичного тексту
-де повинен виводитися результат я вирішив що зроблю отакий якби input але ```self.result.setReadOnly(True)``` поставлю
+де повинен виводитися результат я вирішив що зроблю отакий якби input але ```self.result.setReadOnly(True)``` поставивши
 його тільки на читання без змоги редагувати
 ```python~~
         self.result = QtWidgets.QTextEdit(self.centralwidget)
@@ -68,7 +68,7 @@ MainWindow.setWindowTitle(translate("length calculator", "length calculator")) #
         self.value.setObjectName("value")
 ```
 
-Ну а це просто я так зробив знак =
+Ну а це просто я так зробив знак дорівнює
 ```python~~
         font = QtGui.QFont()
         font.setPointSize(30)
@@ -80,7 +80,7 @@ MainWindow.setWindowTitle(translate("length calculator", "length calculator")) #
         MainWindow.setCentralWidget(self.centralwidget)
 ```
 
-Тут я мазав метод що при натиску на кнопку ```self.btn_calculate.clicked.connect(self.calculate)```
+Назав метод що при натиску на кнопку ```self.btn_calculate.clicked.connect(self.calculate)```
 визивається функція калькулятора
 
 ### Калькулятор
